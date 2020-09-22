@@ -99,8 +99,10 @@ function addSeven(arr) {
     return newArr;
 }
 // Reverse Array - Given an array, write a function that reverses its values, in-place.  Example: reverse([3,1,6,4,2]) returns the same array, but now contains values reversed like so... [2,4,6,1,3].  Do this without creating an empty temporary array.  (Hint: you'll need to swap values).
-function revArray(arr) {
-    arr.reverse();
+   function revArray(arr) {
+    for (var i = 0; i < arr.length / 2; i++) {
+        [arr[i], arr[(arr.length - (i + 1))]] = [arr[(arr.length - (i + 1))], arr[i]]
+    }
     return arr;
 }
 // Outlook: Negative - Given an array, create and return a new one containing all the values of the original array, but make them all negative (not simply multiplied by -1). Given [1,-3,5], return [-1,-3,-5].
